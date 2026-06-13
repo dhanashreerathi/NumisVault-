@@ -1,8 +1,8 @@
 /*
-  Access-Control-Allow-Origin: https://numisvault.pages.dev
+  Access-Control-Allow-Origin: https://numisvault-a43.pages.dev
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://pub-1fce90401985402fa603d92c61824821.r2.dev https://via.placeholder.com; connect-src 'self' https://numisvault-backend.your-server.com https://restcountries.com; font-src 'self' data:;
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://pub-1fce90401985402fa603d92c61824821.r2.dev https://via.placeholder.com; connect-src 'self' https://numisvault-backend.onrender.com https://restcountries.com; font-src 'self' data:;
