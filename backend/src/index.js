@@ -13,6 +13,10 @@ import wishlistRoutes from './routes/wishlist.js';
 import notificationRoutes from './routes/notifications.js';
 import aiRoutes from './routes/ai.js';
 import countryRoutes from './routes/countries.js';
+import chatRoutes from './routes/chat.js';
+import searchRoutes     from './routes/search.js';
+import analyticsRoutes  from './routes/analytics.js';
+import valuationRoutes  from './routes/valuation.js';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -52,7 +56,10 @@ app.use('/api/wishlist', wishlistRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/countries', countryRoutes);
-
+app.use('/api/chat', chatRoutes);
+app.use('/api/search',    searchRoutes);
+app.use('/api/analytics', analyticsRoutes);
+app.use('/api/valuation', valuationRoutes);
 // ─── 404 ──────────────────────────────────────────────────────────────────────
 app.use((_, res) => res.status(404).json({ error: 'Route not found' }));
 

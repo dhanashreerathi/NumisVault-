@@ -79,6 +79,12 @@ export default function Navbar() {
             <div className="profile-dropdown-item" style={{ color: '#ef4444' }} onClick={handleLogout}>
               🚪 Log Out
             </div>
+            
+<div className="profile-dropdown-item" onClick={() => goTo('/search')}>🔍 Smart Search</div>
+<div className="profile-dropdown-item" onClick={() => goTo('/analytics')}>📊 Analytics</div>
+
+
+<div className="profile-dropdown-item" onClick={() => goTo('/valuation')}>🪙 Valuation Estimator</div>
           </div>
         </div>
       </div>

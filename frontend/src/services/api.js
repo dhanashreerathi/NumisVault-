@@ -72,6 +72,14 @@ export const notificationsApi = {
   inquire:     (body, token)            => request('/notifications/inquire', { method: 'POST', body: JSON.stringify(body) }, token),
 };
 
+
+// Chatbot API 
+
+
+export const chatApi = {
+  send: (body, token) => request('/chat', { method: 'POST', body: JSON.stringify(body) }, token),
+};
+
 // ─── AI ───────────────────────────────────────────────────────────────────────
 export const aiApi = {
   extract: (formData, token) => requestRaw('/ai/extract', { method: 'POST', body: formData }, token),
@@ -80,4 +88,16 @@ export const aiApi = {
 // ─── Countries ────────────────────────────────────────────────────────────────
 export const countriesApi = {
   get: () => request('/countries'),
+};
+
+export const searchApi = {
+  query: (body) => request('/search', { method: 'POST', body: JSON.stringify(body) }),
+};
+
+export const analyticsApi = {
+  get: () => request('/analytics'),
+};
+
+export const valuationApi = {
+  estimate: (body, token) => request('/valuation', { method: 'POST', body: JSON.stringify(body) }, token),
 };

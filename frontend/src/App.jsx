@@ -18,6 +18,10 @@ import WishlistPage from './pages/WishlistPage';
 import ProfilePage from './pages/ProfilePage';
 import SettingsPage from './pages/SettingsPage';
 import AdminPage from './pages/AdminPage';
+import ChatWidget from './components/shared/ChatWidget';
+import SmartSearchPage from './pages/SmartSearchPage';
+import AnalyticsPage   from './pages/AnalyticsPage';
+import ValuationPage   from './pages/ValuationPage';
 
 function ProtectedRoute({ children, adminOnly = false }) {
   const { user, role, sessionChecked } = useAuth();
@@ -120,6 +124,12 @@ export default function App() {
           } />
 
           <Route path="*" element={<Navigate to="/" replace />} />
+
+          <Route path="/search"    element={<SmartSearchPage />} />
+          <Route path="/analytics" element={<AnalyticsPage />} />
+          <Route path="/valuation" element={
+          <ProtectedRoute adminOnly><ValuationPage /></ProtectedRoute>
+          } />
         </Routes>
       </main>
 
@@ -129,6 +139,7 @@ export default function App() {
       {toast      && <Toast message={toast.msg} />}
       {confirmModal && <ConfirmModal {...confirmModal} />}
       {alertModal   && <AlertModal  {...alertModal}  />}
+       <ChatWidget />
     </>
   );
 }
